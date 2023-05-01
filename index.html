@@ -618,10 +618,14 @@
                 title: '3rd May 2023',
                 text: "Mark Your Calendar...!",
                 icon: 'success',
+            }).then((result) => {
+                //if (result.isConfirmed) {
+                    $('#weddingmusic').trigger("play");
+                //}
             });
-            $('#savethedate').focus();
+            
         });
-        $('#savethedate').on('focusout', function () { $('#weddingmusic').trigger("play");})
+        //$('#savethedate').on('focusout', function () { $('#weddingmusic').trigger("play");})
         window.onscroll = function () {
             $('#weddingmusic').trigger("play");
         }
