@@ -629,7 +629,10 @@
         window.onscroll = function () {
             $('#weddingmusic').trigger("play");
         }
-        var d = new Date("2023-05-03");
+        //var d = new Date("2023-05-03");
+        var d = new Date(new Date("2023-05-03").getTime() + 60 * 60 * 24 * 1000);
+        d = new Date("3 may 2023 12:56:00") // your date object
+        d.setHours(d.getHours() + 24)
         // default example
         simplyCountdown('.simply-countdown-one', {
             year: d.getFullYear(),
